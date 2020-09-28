@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "cp src/index.html _site && cp -r src/css _site && cp -r src/js _site && cp -r src/fonts _site && cp -r src/images _site && cp -r src/vendor _site",
-    "clean": "rimraf _site/*",
+    "clean": "rimraf _site/* && mkdir -p _site",
     "dev": "chromium-browser src/index.html",
     "prod": "chromium-browser _site/index.html",
     "test": "true"
