@@ -5,10 +5,14 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "cp src/index.html public && cp -r src/css public && cp -r src/js public && cp -r src/fonts public && cp -r src/images public && cp -r src/vendor public",
-    "clean": "rm -rf public/*",
+    "prebuild": "npm run clean",
+    "build": "cp src/index.html _site && cp -r src/css _site && cp -r src/js _site && cp -r src/fonts _site && cp -r src/images _site && cp -r src/vendor _site",
+    "clean": "rimraf _site/*",
     "dev": "chromium-browser src/index.html",
-    "prod": "chromium-browser public/index.html",
+    "prod": "chromium-browser _site/index.html",
     "test": "true"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }
