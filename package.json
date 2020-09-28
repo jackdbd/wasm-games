@@ -1,0 +1,14 @@
+{
+  "name": "wasm-games",
+  "version": "1.0.0",
+  "description": "Coming soon",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "cp src/index.html public && cp -r src/css public && cp -r src/js public && cp -r src/fonts public && cp -r src/images public && cp -r src/vendor public",
+    "clean": "rm -rf public/*",
+    "dev": "chromium-browser src/index.html",
+    "prod": "chromium-browser public/index.html",
+    "test": "true"
+  }
+}
